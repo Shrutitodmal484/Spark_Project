@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+/* Hide all Google Translate elements with !important */
+.goog-te-banner-frame,
+.goog-te-gadget,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover,
+.skiptranslate,
+body > .skiptranslate,
+.goog-te-menu-frame,
+.goog-te-menu-value,
+.goog-te-combo {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Prevent page jump during translation */
+html, body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* Hide Google Translate top bar */
+body {
+  top: 0 !important;
+}
+
+/* Hide any iframe that might be added by Google Translate */
+iframe[src*="translate.google.com"] {
+  display: none !important;
+  visibility: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}

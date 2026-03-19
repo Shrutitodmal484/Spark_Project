@@ -1,0 +1,33 @@
+/* Hide Google Translate top banner */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Fix body position when banner is hidden */
+body {
+  top: 0 !important;
+}
+
+/* Style the widget container */
+#google_translate_element {
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Style the widget itself */
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  font-family: inherit !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value img {
+  display: none;
+}

@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npmrc
+
+# Next.js
+.next/
+out/
+build/
+.open-next/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+.env.sh
+
+# Secrets and sensitive info
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!next.config.ts
+!eslint.config.mjs
+!postcss.config.mjs
+keys.json
+service-account-key.json
+
+# Build artifacts
+build_output*.txt
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Sub-app specific ignores
+backend/node_modules/
+my-next-app/node_modules/
+my-next-app/.next/
+my-next-app/build_output*.txt
